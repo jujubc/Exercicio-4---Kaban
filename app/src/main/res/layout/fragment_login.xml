@@ -19,11 +19,13 @@
         android:layout_marginHorizontal="25dp">
 
         <TextView
+            android:id="@+id/textViewEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="E-mail"
             android:textColor="@color/white"/>
         <EditText
+            android:id="@+id/editTextEmail"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:hint="Digite seu e-mail"
@@ -32,12 +34,14 @@
                 android:layout_marginTop="4dp"
             android:background="@drawable/bg_edit_text"/>
         <TextView
+            android:id="@+id/textViewSenha"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Senha"
             android:textColor="@color/white"
             android:layout_marginTop="16dp"/>
         <EditText
+            android:id="@+id/editTextSenha"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:inputType="textPassword"
@@ -46,19 +50,23 @@
                 android:layout_marginTop="4dp"
             android:background="@drawable/bg_edit_text"/>
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Login"
             android:textColor="@color/color_default"
             app:backgroundTint="@null"
+            android:background="@drawable/bg_btn"
             android:layout_marginTop="16dp"/>
         <LinearLayout
+            android:id="@+id/linearLayout2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginTop="4dp">
 
             <TextView
+                android:id="@+id/textViewCriarConta"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Criar Conta"
@@ -67,6 +75,7 @@
                 android:textColor="@color/white"/>
 
             <TextView
+                android:id="@+id/textViewRecuperarConta"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Recuperar Conta"
@@ -75,6 +84,7 @@
                 android:textColor="@color/white"/>
         </LinearLayout>
         <ProgressBar
+            android:id="@+id/progressBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:indeterminateTint="@color/white"
