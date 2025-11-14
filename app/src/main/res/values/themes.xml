@@ -4,8 +4,8 @@
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
         <item name="android:windowBackground">@color/color_default</item>
-        <item name="colorPrimary">#9C27B0</item>
-        <item name="colorPrimaryVariant">#E91E63</item>
+        <item name="colorPrimary">#C14E74</item>
+        <item name="colorPrimaryVariant">#A01246</item>
 
     </style>
 
