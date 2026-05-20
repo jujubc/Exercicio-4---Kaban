@@ -47,4 +47,9 @@
     <string name="text_button_dialog_confirm_logout">Confirmar</string>
     <string name="text_message_dialog_confirm_logout">Aperte em confirmar para sair da sua conta</string>
     <string name="text_message_recover_account_fragment">Um link para redefinição de senha foi enviado para seu e-mail.</string>
+    <string name="text_save_sucess_form_task_fragment">Tarefa salva con sucesso!</string>
+    <string name="error_generic">Ocorreu um erro! Por favor tente novamente mais tarde.</string>
+
+    <string name="text_list_task_empty">Nenhuma tarefa cadastrada!</string>
+    <string name="text_list_task_load">Aguarde, estamos carregando as informações!</string>
 </resources>

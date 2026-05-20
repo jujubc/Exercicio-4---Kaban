@@ -22,6 +22,8 @@ class TaskAdapter(
         holder.binding.textDescription.text = task.description
     }
 
+    fun submit(taskList: kotlin.collections.MutableList<com.juliana.task.data.model.Task>) {}
+
     inner class MyViewHolder(val binding: ItemTaskBinding): RecyclerView.ViewHolder(binding.root) {
 
     }
