@@ -25,6 +25,7 @@ import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.database
 
 
+
 class TodoFragment : Fragment() {
 
 
@@ -63,7 +64,7 @@ class TodoFragment : Fragment() {
         }
     }
 
-    private fun initRecyclerViewTask(taskList: List<Task>){
+    private fun initRecyclerViewTask(taskList: List<Task> = emptyList()){
 
         taskAdapter = TaskAdapter(taskList)
         binding.recyclerViewTask.layoutManager = LinearLayoutManager(requireContext())
