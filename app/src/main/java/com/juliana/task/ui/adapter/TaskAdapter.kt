@@ -7,7 +7,7 @@ import com.juliana.task.data.model.Task
 import com.juliana.task.databinding.ItemTaskBinding
 
 class TaskAdapter(
-    private val taskList: List<Task>
+    private var taskList: MutableList<Task>
 ): RecyclerView.Adapter<TaskAdapter.MyViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -22,7 +22,10 @@ class TaskAdapter(
         holder.binding.textDescription.text = task.description
     }
 
-    fun submit(taskList: kotlin.collections.MutableList<com.juliana.task.data.model.Task>) {}
+    fun submit(newTaskList: MutableList<Task>) {
+        taskList = newTaskList
+        notifyDataSetChanged()
+    }
 
     inner class MyViewHolder(val binding: ItemTaskBinding): RecyclerView.ViewHolder(binding.root) {
 

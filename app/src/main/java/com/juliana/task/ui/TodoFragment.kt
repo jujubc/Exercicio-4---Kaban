@@ -64,7 +64,7 @@ class TodoFragment : Fragment() {
         }
     }
 
-    private fun initRecyclerViewTask(taskList: List<Task> = emptyList()){
+    private fun initRecyclerViewTask(taskList: MutableList<Task> = mutableListOf()){
 
         taskAdapter = TaskAdapter(taskList)
         binding.recyclerViewTask.layoutManager = LinearLayoutManager(requireContext())
@@ -73,18 +73,19 @@ class TodoFragment : Fragment() {
         binding.recyclerViewTask.adapter = taskAdapter
     }
 
-    private fun getTask() = listOf(
+    private fun getTask() {
+
         reference
-            .child("tasks")
+            .child("task")
             .child(auth.currentUser?.uid ?: "")
             .addValueEventListener(object: ValueEventListener {
                 override fun onDataChange(p0: DataSnapshot) {
                     val taskList = mutableListOf<Task>()
 
                     for (ds in p0.children){
-                        val task = ds.getValue(Task::class.java) as Task
+                        val task = ds.getValue(Task::class.java)
 
-                        if (task.status == Status.TODO){
+                        if (task != null && task.status == Status.TODO){
                             taskList.add(task)
                         }
                     }
@@ -99,7 +100,7 @@ class TodoFragment : Fragment() {
                     Toast.makeText(requireContext(), R.string.error_generic, Toast.LENGTH_SHORT).show()
                 }
             })
-    )
+    }
 
     private fun listEmpty(taskList: List<Task>){
         binding.textInfo.text = if (taskList.isEmpty()){
